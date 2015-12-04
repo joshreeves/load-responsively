@@ -1,10 +1,10 @@
-# responsively.js
+# load-responsively.js
 A jQuery plugin that uses the aspect ratio of not-yet-loaded images to reserve responsive space.
 
 ### Usage
 ```js
 $(document).ready(function() {
-  $("img").responsively();
+  $("img").loadResponsively();
 });
 ```
 

@@ -1,11 +1,11 @@
 {
-  "name": "responsively",
-  "version": "0.0.1",
+  "name": "load-responsively",
+  "version": "1.0.0",
   "authors": [
     "Josh Reeves <josh@plyinteractive.com>"
   ],
   "description": "A jQuery plugin that uses the aspect ratio of not-yet-loaded images to reserve responsive space.",
-  "main": "responsively.js",
+  "main": "load-responsively.js",
   "moduleType": [],
   "keywords": [
     "preload",

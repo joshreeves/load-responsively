@@ -1,5 +1,5 @@
 (function( $ ) {
-  $.fn.responsively = function(options) {
+  $.fn.loadResponsively = function(options) {
 
     var settings = $.extend({
       limitSize: true,
