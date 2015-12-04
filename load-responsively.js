@@ -2,6 +2,7 @@
   $.fn.loadResponsively = function(options) {
 
     var settings = $.extend({
+      className: 'loaded-responsively',
       limitSize: true,
     }, options );
 
@@ -27,6 +28,7 @@
         $container = $grandParent;
       }
 
+      $container.addClass(settings.className);
       $container.css({ opacity: 0, transition: 'opacity 1s ease-in-out' });
       $this.css({position: 'absolute', top: 0, left: 0, width: '100%'});
 
