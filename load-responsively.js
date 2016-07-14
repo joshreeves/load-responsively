@@ -34,6 +34,7 @@
 
       $image.on('load', function() {
         $container.css({ opacity: 1 });
+        //TODO: remove this line and replace with onImageLoaded callback
         $image.css({visibility: 'visible'});
       });
       if ($image[0].complete) {
