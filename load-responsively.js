@@ -32,9 +32,14 @@
       $container.css({ opacity: 0, transition: 'opacity 1s ease-in-out' });
       $this.css({position: 'absolute', top: 0, left: 0, width: '100%'});
 
-      $image.on('load', function() {
+      if ($image.width !== undefined && $image.width !== 0) {
         $container.css({ opacity: 1 });
-      });
+      }
+      else {
+        $image.on('load', function() {
+          $container.css({ opacity: 1 });
+        });
+      }
     });
 
   };
