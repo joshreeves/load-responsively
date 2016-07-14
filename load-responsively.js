@@ -32,13 +32,15 @@
       $container.css({ opacity: 0, transition: 'opacity 1s ease-in-out' });
       $this.css({position: 'absolute', top: 0, left: 0, width: '100%'});
 
-      if ($image.width !== undefined && $image.width !== 0) {
+      $image.on('load', function() {
         $container.css({ opacity: 1 });
-      }
-      else {
-        $image.on('load', function() {
-          $container.css({ opacity: 1 });
-        });
+        //TODO: remove this line and replace with onImageLoaded callback
+        $image.css({visibility: 'visible'});
+      });
+      if ($image[0].complete) {
+        setTimeout(function() {
+          $image.trigger('load');
+        }, 100);
       }
     });
 
