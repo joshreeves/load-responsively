@@ -39,7 +39,7 @@
       });
       if ($image[0].complete) {
         setTimeout(function() {
-          $image.load();
+          $image.trigger('load');
         }, 100);
       }
     });
